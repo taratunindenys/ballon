@@ -50,6 +50,19 @@ body {
   text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
 }
 
+.title-third {
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  font-weight: 400;
+}
+
 @keyframes leftTorigth {
   0% {
     opacity: 0;
@@ -89,6 +102,18 @@ body {
   }
 }
 
+.margin-bottom-1rem {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-3rem {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-5rem {
+  margin-bottom: 5rem;
+}
+
 .margin-bottom-8rem {
   margin-bottom: 8rem;
 }
@@ -105,7 +130,6 @@ html {
 
 .container {
   background-color: #f7f7f7;
-  height: 94vh;
 }
 
 body {
@@ -158,10 +182,198 @@ body {
   animation-fill-mode: backwards;
 }
 
+.btn-text {
+  font-size: 1.6rem;
+  letter-spacing: .2rem;
+  font-weight: 700;
+  color: #a14f03;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px #a14f03 solid;
+  display: inline-block;
+  transition: all .5s;
+}
+
+.btn-text:hover {
+  background: #ba8554;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(2rem);
+}
+
+.btn-text:active {
+  transform: translateY(0rem);
+}
+
+.composition {
+  position: relative;
+}
+
+.composition__photo {
+  width: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+  position: absolute;
+  z-index: 10;
+  transition: all .2s;
+}
+
+.composition__photo_n1 {
+  top: 0;
+  left: 2rem;
+}
+
+.composition__photo_n2 {
+  top: 2rem;
+  right: 0;
+}
+
+.composition__photo_n3 {
+  top: 12rem;
+  right: 10rem;
+}
+
+.composition__photo:hover {
+  outline: 0.5rem solid #ba8554;
+  outline-offset: 1rem;
+  transform: scale(1.1);
+  z-index: 20;
+}
+
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.9);
+}
+
+.adventure-card {
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: all .2s;
+}
+
+.adventure-card:hover {
+  transform: translateY(-1.5rem) scale(1.1);
+}
+
+.adventure-card__icon {
+  font-size: 6rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url();
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.cards-tour {
+  height: 50rem;
+  -moz-perspective: 1500px;
+  position: relative;
+}
+
+.cards-tour__side {
+  height: 50rem;
+  transition: all 1s;
+  color: #fafffa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.cards-tour__side_front {
+  background: #fff;
+}
+
+.cards-tour__side_back {
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  transform: rotateY(180deg);
+}
+
+.cards-tour:hover .cards-tour__side_front {
+  transform: rotateY(-180deg);
+}
+
+.cards-tour:hover .cards-tour__side_back {
+  transform: rotateY(0deg);
+}
+
+.cards-tour__img {
+  background-blend-mode: hard-light;
+  height: 40%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  margin-bottom: 7rem;
+}
+
+.cards-tour__img_1 {
+  background: #ba8554 url(../img/tour-mg-1.jpg) center/cover;
+}
+
+.cards-tour__img_2 {
+  background: #ba8554 url(../img/tour-mg-2.jpg) center/cover;
+}
+
+.cards-tour__img_3 {
+  background: #ba8554 url(../img/tour-mg-3.jpg) center/cover;
+}
+
+.cards-tour__title {
+  font-size: 2.8rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: right;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  transform: skewY(3.33deg);
+  position: absolute;
+  top: 15.2rem;
+  right: 0;
+  width: 100%;
+}
+
+.cards-tour__dscrptn ul {
+  color: #777;
+}
+
+.cards-tour__dscrptn ul li {
+  font-size: 1.6rem;
+  letter-spacing: 2rem;
+}
+
+.cards-tour__dscrptn ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.cards-tour__backside-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cards-tour__text {
+  margin-bottom: 8rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cards-tour__text_1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.cards-tour__text_2 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
 .header {
   height: 95vh;
   background: url(../img/background1.png) center/cover no-repeat;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   position: relative;
 }
 
@@ -182,7 +394,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background: #aa2020;
   margin: 0 auto;
   margin-bottom: 8rem;
 }
@@ -198,7 +409,6 @@ body {
 }
 
 [class^="col-"] {
-  background: #3eab2b;
   float: left;
 }
 
@@ -232,4 +442,15 @@ body {
 
 .title-second {
   padding-top: 8rem;
+}
+
+.adventure {
+  padding: 21rem 0;
+  background: url(../img/adventure.jpg) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  transform: skewY(2deg);
+}
+
+.adventure > * {
+  transform: skewY(-2deg);
 }

@@ -8,3 +8,22 @@
         content: ""
         display: table
         clear: both
+
+
+@mixin phone
+    @media(max-width: 600px)
+        @content
+
+@mixin respond($brakepoint)
+    @if $brakepoint == phone
+        @media(max-width: 600px)
+            @content
+    @if $brakepoint == tab-port
+        @media(max-width: 900px)
+            @content
+    @if $brakepoint == tab-lang
+        @media(max-width: 1240px)
+            @content
+    @if $brakepoint == big-screen
+        @media(min-width: 1800px)
+            @content
